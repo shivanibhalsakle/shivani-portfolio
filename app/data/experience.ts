@@ -33,3 +33,29 @@ export const experience = [
   },
 ];
 
+export const skills = [
+  {
+    title: "Requirements Gathering",
+    subtitle: "& Documentation",
+  },
+  {
+    title: "Process Improvement",
+    subtitle: "& Automation",
+  },
+  {
+    title: "Data Analysis",
+    subtitle: "& Visualization",
+  },
+  {
+    title: "Stakeholder Management",
+    subtitle: "& Collaboration",
+  },
+  {
+    title: "Dashboard Development",
+    subtitle: "& Reporting",
+  },
+  {
+    title: "Agile Delivery",
+    subtitle: "& UAT",
+  },
+];
