@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="max-w-3xl text-[#062447]">
           <p className="mb-4 text-xl font-medium">Hi, I’m</p>
 
-          <h1 className="text-5xl font-bold tracking-tight md:text-7xl">
+          <h1 className="text-1xl font-bold tracking-tight md:text-7xl">
             Shivani Bhalsakle
           </h1>
 
@@ -45,6 +45,8 @@ export default function Hero() {
         alt="Shivani Bhalsakle"
         className="
             relative
+                ml-10
+
             h-[380px]
             w-[380px]
             rounded-full

@@ -73,7 +73,7 @@ export default function Experience() {
 
                         <li
                             key={item}
-                            className="text-white/80"
+                            className="text-[#00365f]"
                         >
                             • {item}
                         </li>
@@ -93,7 +93,7 @@ export default function Experience() {
     <div>
 
         <div className="pt-20 -translate-x-25">
-  <div className="h-64 w-72 overflow-hidden rounded-2xl border border-white/15 bg-white/5 p-5 backdrop-blur-md">
+  <div className="h-64 w-72 overflow-hidden rounded-2xl border border-[#00365f] bg-white/5 p-5 backdrop-blur-md">
     <h3 className="mb-2 text-xl font-bold text-white">What I bring</h3>
 
     
@@ -139,11 +139,11 @@ export default function Experience() {
       {skill.icon}
 
       <div>
-        <h4 className="text-sm font-semibold text-white">
+        <h4 className="text-sm font-semibold text-[#00365f]">
           {skill.title}
         </h4>
 
-        <p className="text-xs text-white/60">
+        <p className="text-xs text-[#00365f]">
           {skill.subtitle}
         </p>
       </div>

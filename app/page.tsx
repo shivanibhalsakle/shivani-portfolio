@@ -4,6 +4,7 @@ import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import FloatingBubbles from "./components/FloatingBubbles";
 
 const sections = ["Home", "About", "Experience", "Projects", "Skills", "Education", "Contact"];
 
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#f3dfc5] via-[#3bb7c9] to-[#001f3f] text-white">
       
+  <FloatingBubbles />
 
    <Navigation />
    <Hero />   

@@ -35,7 +35,7 @@ export default function Projects() {
   return (
     <section id="projects" className="min-h-screen px-8 py-24 md:px-20">
       <div className="mb-10">
-        <h2 className="text-4xl font-bold text-white">Project Schema</h2>
+        <h2 className="text-4xl font-bold text-white"> Featured Projects</h2>
         <p className="mt-4 max-w-2xl text-white/75">
           A relational view of selected projects, connected by shared tools and skills.
         </p>
@@ -168,9 +168,9 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={project.title}
-            className={`absolute ${positions[index]} group w-[300px] rounded-2xl border border-white/15 bg-white/8 p-5 backdrop-blur-md transition-all duration-500 hover:-translate-y-3 hover:border-cyan-300/50 hover:bg-white/12 hover:shadow-2xl`}
+            className={`absolute ${positions[index]} group w-[300px] shadow-[0_18px_40px_rgba(0,0,0,0.18),0_0_45px_rgba(34,211,238,0.22)] rounded-2xl border border-white/15 bg-white/8 p-5 backdrop-blur-md transition-all duration-500 hover:-translate-y-3 hover:border-cyan-300/50 hover:bg-white/12 hover:shadow-2xl`}
           >
-            <p className="text-xs uppercase tracking-[0.25em] text-cyan-200/80">
+            <p className="text-xs uppercase tracking-[0.25em] text-white/80">
               Dive: {project.dive}
             </p>
 
@@ -180,12 +180,12 @@ export default function Projects() {
 
             <div className="my-4 h-px bg-white/15" />
 
-            <p className="text-sm leading-6 text-white/80">
+            <p className="text-sm leading-6 text-[#00365f]/80">
               {project.investigation}
             </p>
 
             <div className="mt-5">
-              <p className="mb-3 text-sm text-white/60">Skills</p>
+              
 
               <div className="flex flex-wrap gap-2">
                 {project.skills.map((skill) => (

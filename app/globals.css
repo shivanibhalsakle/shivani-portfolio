@@ -89,3 +89,27 @@ button:hover,
 .cursor-blue-dot:hover {
   cursor: none;
 }
+
+@keyframes floatBubble {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.45;
+  }
+
+  50% {
+    transform: translateY(-55vh) translateX(18px) scale(1.15);
+  }
+
+  100% {
+    transform: translateY(-110vh) translateX(-12px) scale(0.85);
+    opacity: 0;
+  }
+}
+
+.animate-floatBubble {
+  animation: floatBubble 14s linear infinite;
+}
