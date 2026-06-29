@@ -86,7 +86,7 @@ button,
 a:hover,
 button:hover,
 [role="button"]:hover,
-.cursor-blue-dot:hover {
+.cursor-blue-dot:hover * {
   cursor: none;
 }
 

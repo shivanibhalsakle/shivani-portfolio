@@ -1,6 +1,33 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Cursor from "./components/Cursor";
+import { Poppins } from "next/font/google";
+import { Manrope } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
+
+
+const spacegrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+
+const inter = Inter({
+  subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +54,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className={spacegrotesk.className}>{children} <Cursor />
+
+</body>
     </html>
   );
 }

@@ -16,16 +16,18 @@ export default function Navigation() {
           SB.
         </p>
 
-        <nav className="flex flex-col gap-5 text-sm">
+        <nav className="flex flex-col items-center gap-5 text-sm">
           {sections.map((section) => (
             <a
               key={section}
               href={`#${section.toLowerCase()}`}
               className="
                 text-white
+                font-bold
                 cursor-pointer
+                hover:text-cyan-300
                 transition-all
-                duration-300
+                duration-250
                 hover:scale-125
                 hover:font-semibold
               "
