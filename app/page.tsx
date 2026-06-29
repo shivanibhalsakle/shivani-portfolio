@@ -3,6 +3,8 @@ import Navigation from "./components/Navigation";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+
 const sections = ["Home", "About", "Experience", "Projects", "Skills", "Education", "Contact"];
 
 export default function Home() {
@@ -32,6 +34,7 @@ export default function Home() {
         <h2 className="mt-4 text-4xl font-bold">Skills</h2>
       </section>
 
+  <Skills />
   <Education />
 
       <section id="contact" className="min-h-screen px-8 py-24 md:px-20">

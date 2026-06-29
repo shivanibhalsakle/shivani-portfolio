@@ -25,6 +25,12 @@ const positions = [
   "left-[64%] top-[50%]",
 ];
 
+const bubblePositions = [
+  "left-1/2 top-0 -translate-x-1/2 -translate-y-1/2",
+  "right-0 top-1/2 translate-x-1/2 -translate-y-1/2",
+  "left-0 top-1/2 -translate-x-1/2 -translate-y-1/2",
+];
+
 export default function Projects() {
   return (
     <section id="projects" className="min-h-screen px-8 py-24 md:px-20">
@@ -157,7 +163,8 @@ export default function Projects() {
     </animateMotion>
   </circle>
 </svg>
-
+<div className="pointer-events-none absolute right-3 top-3 z-[999] opacity-0 transition-opacity duration-300 group-hover:opacity-100">    
+</div>
         {projects.map((project, index) => (
           <div
             key={project.title}
@@ -193,6 +200,39 @@ export default function Projects() {
                 ))}
               </div>
             </div>
+<div className="pointer-events-none absolute inset-0 z-[999] opacity-0 transition-opacity duration-300 group-hover:opacity-100">  {project.impacts.map((impact, impactIndex) => (
+    <div
+      key={impact}
+      className={`
+  absolute
+  ${bubblePositions[impactIndex]}
+  h-[64px]
+  w-[64px]
+  rounded-full
+  border
+  border-white/80
+  bg-slate-900/60
+  backdrop-blur-md
+  shadow-[0_0_28px_rgba(34,211,238,0.75)]
+  flex
+  items-center
+  justify-center
+  text-center
+  text-[9px]
+  leading-tight
+  px-2
+  font-semibold
+  text-white
+  animate-bob
+`}
+    style={{
+  animationDelay: `${impactIndex * 180}ms`,
+}}
+    >
+      {impact}
+    </div>
+  ))}
+</div>
           </div>
         ))}
       </div>

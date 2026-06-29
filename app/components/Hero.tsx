@@ -17,8 +17,7 @@ export default function Hero() {
           </p>
 
           <p className="mt-6 max-w-2xl text-lg leading-8">
-            I turn business problems into structured solutions using data,
-            analysis, and collaboration to drive impact.
+            Good decisions begin with better questions.
           </p>
 
           <div className="mt-8 flex gap-4">
@@ -37,6 +36,29 @@ export default function Hero() {
             </a>
           </div>
         </div>
+
+        <div className="group relative mr-24 hidden lg:block">
+    <div className="absolute inset-0 rounded-full bg-cyan-400/20 blur-3xl" />
+
+    <img
+        src="/profile.png"
+        alt="Shivani Bhalsakle"
+        className="
+            relative
+            h-[380px]
+            w-[380px]
+            rounded-full
+            object-cover
+            border
+            border-white/20
+            shadow-[0_30px_80px_rgba(0,0,0,0.25)]
+            
+        "
+    />
+</div>
       </section>
+
+      
+      
        );
 }
