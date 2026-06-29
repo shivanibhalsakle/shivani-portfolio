@@ -31,10 +31,15 @@ export default function Navigation() {
                 hover:scale-125
                 hover:font-semibold
               "
+              style={{
+  textShadow: "0 0 8px rgba(13, 41, 72, 0.51)",
+}}
             >
               {section}
             </a>
           ))}
+
+          
         </nav>
       </div>
     </aside>
