@@ -5,6 +5,7 @@ import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import FloatingBubbles from "./components/FloatingBubbles";
+import Contact from "./components/Contact";
 
 const sections = ["Home", "About", "Experience", "Projects", "Skills", "Education", "Contact"];
 
@@ -31,18 +32,10 @@ export default function Home() {
 
     <Projects />
 
-      <section id="skills" className="min-h-screen px-8 py-24 md:px-20">
-        <p className="text-sm uppercase tracking-[0.3em] text-white/70">04 Skills</p>
-        <h2 className="mt-4 text-4xl font-bold">Skills</h2>
-      </section>
-
   <Skills />
   <Education />
 
-      <section id="contact" className="min-h-screen px-8 py-24 md:px-20">
-        <p className="text-sm uppercase tracking-[0.3em] text-white/70">06 Contact</p>
-        <h2 className="mt-4 text-4xl font-bold">Let’s Connect</h2>
-      </section>
+  <Contact />
     </main>
   );
 }

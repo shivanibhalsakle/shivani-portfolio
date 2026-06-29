@@ -25,23 +25,23 @@ const handleScroll = () => {
 
           <div className="space-y-16">
             <div>
-              <h4 className="text-2xl font-bold text-white">
+              <h4 className="text-2xl font-bold text-cyan-300">
                 NYU Tandon School of Engineering
               </h4>
               <p className="mt-2 text-xl text-white/80">
-                MS in Management of Technology
+                MS in Management of Technology | GPA 3.69
               </p>
-              <p className="mt-1 text-lg text-white/55">May 2026</p>
+              <p className="mt-1 text-lg text-[#00E5FF]/55">May 2026</p>
             </div>
 
             <div>
-              <h4 className="text-2xl font-bold text-white">
+              <h4 className="text-2xl font-bold text-cyan-300">
                 Pune University
               </h4>
               <p className="mt-2 text-xl text-white/80">
-                BE in Computer Engineering
+                BS in Computer Science | GPA 3.50
               </p>
-              <p className="mt-1 text-lg text-white/55">May 2024</p>
+              <p className="mt-1 text-lg text-[#00E5FF]/55">May 2024</p>
             </div>
           </div>
         </div>

@@ -24,4 +24,5 @@ export const skills = [
   { name: "BRDs", mapsTo: "SAKSHI experience", target: "experience" },
   { name: "CAPM", mapsTo: "Education section", target: "education" },
   { name: "ECBA", mapsTo: "Education section", target: "education" },
+  { name: "PowerPoint", mapsTo: "Pizzeria Analysis", target: "projects" },
 ];

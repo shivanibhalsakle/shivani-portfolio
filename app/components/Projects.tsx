@@ -17,7 +17,7 @@ const skillColors: Record<string, string> = {
 
 const positions = [
   "left-[-2%] top-[8%]",
-  "left-[33%] top-[5%]",
+  "left-[32%] top-[5%]",
   "left-[66%] top-[8%]",
 
   "left-[2%] top-[48%]",
@@ -43,129 +43,163 @@ export default function Projects() {
 
       <div className="relative h-[850px] max-w-6xl">
         <svg
-        
   className="pointer-events-none absolute inset-0 h-full w-full"
   viewBox="0 0 1200 850"
   preserveAspectRatio="none"
 >
-    <defs>
-  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur stdDeviation="4" result="blur" />
-    <feMerge>
-      <feMergeNode in="blur" />
-      <feMergeNode in="SourceGraphic" />
-    </feMerge>
-  </filter>
-</defs>
-  {/* Python: Airline ↔ Housing */}
-  <path id="python-line-1" d="M250 280 V425 H520 V520" stroke="#38bdf8" strokeWidth="3" fill="none" />
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  {/* =======================================================
+      PYTHON : Airline → Housing Hub
+  ======================================================= */}
+
+  <path
+     id="python-line" 
+    d="M200 285 V385 H900 V620"
+    stroke="#389bfd"
+    strokeWidth="3"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+
   {/* Main packet */}
-<circle r="5" fill="#38bdf8" filter="url(#glow)">
-  <animate
-    attributeName="r"
-    values="4;6;4"
-    dur="1.2s"
-    repeatCount="indefinite"
-  />
-  <animateMotion dur="3s" repeatCount="indefinite">
-    <mpath href="#python-line-1" />
-  </animateMotion>
-</circle>
-
-{/* Trailing packet */}
-<circle
-  r="3.5"
-  fill="#7dd3fc"
-  opacity="0.45"
-  filter="url(#glow)"
->
-  <animate
-    attributeName="r"
-    values="3;4.5;3"
-    dur="1.2s"
-    repeatCount="indefinite"
-  />
-  <animateMotion
-    dur="3s"
-    begin="-0.35s"
-    repeatCount="indefinite"
-  >
-    <mpath href="#python-line-1" />
-  </animateMotion>
-</circle>
-
-  {/* Python: Housing ↔ India */}
-  <path id="python-line-2" d="M690 620 H820" stroke="#38bdf8" strokeWidth="3" fill="none" />
-  {/* Main packet */}
-<circle r="5" fill="#38bdf8" filter="url(#glow)">
-  <animate
-    attributeName="r"
-    values="4;6;4"
-    dur="1.2s"
-    repeatCount="indefinite"
-  />
-  <animateMotion dur="3s" repeatCount="indefinite">
-    <mpath href="#python-line-1" />
-  </animateMotion>
-</circle>
-
-{/* Trailing packet */}
-<circle
-  r="3.5"
-  fill="#7dd3fc"
-  opacity="0.45"
-  filter="url(#glow)"
->
-  <animate
-    attributeName="r"
-    values="3;4.5;3"
-    dur="1.2s"
-    repeatCount="indefinite"
-  />
-  <animateMotion
-    dur="3s"
-    begin="-0.35s"
-    repeatCount="indefinite"
-  >
-    <mpath href="#python-line-1" />
-  </animateMotion>
-</circle>
-
-  {/* Gurobi: Airline ↔ Workforce */}
-  <path id="gurobi-line" d="M150 350 V430" stroke="#818cf8" strokeWidth="3" fill="none" />
-  <circle r="5" fill="#818cf8" filter="url(#glow)">
-    <animateMotion dur="2.8s" repeatCount="indefinite">
-      <mpath href="#gurobi-line" />
-    </animateMotion>
-  </circle>
-
-  {/* SQL/Data: Pizzeria ↔ Housing */}
-  <path id="sql-line" d="M560 330 V455 H610 V520" stroke="#22c55e" strokeWidth="3" fill="none" />
-  <circle r="5" fill="#22c55e" filter="url(#glow)">
+  <circle r="5" fill="#389bfd" filter="url(#glow)">
+    <animate attributeName="r" values="4;6;4" dur="1.2s" repeatCount="indefinite"/>
     <animateMotion dur="3.2s" repeatCount="indefinite">
-      <mpath href="#sql-line" />
+      <mpath href="#python-line"/>
     </animateMotion>
   </circle>
 
-  {/* Power BI/Product Analytics: Pizzeria ↔ DeveloperStar */}
-  <path id="powerbi-line" d="M760 180 H820 V210 H880" stroke="#a78bfa" strokeWidth="3" fill="none" />
+  {/* Trail */}
+  <circle r="3.5" fill="#7dd3fc" opacity="0.45" filter="url(#glow)">
+    <animate attributeName="r" values="3;4.5;3" dur="1.2s" repeatCount="indefinite"/>
+    <animateMotion dur="3.2s" begin="-0.45s" repeatCount="indefinite">
+      <mpath href="#python-line"/>
+    </animateMotion>
+  </circle>
+
+
+
+  {/* =======================================================
+      SQL : Pizzeria → Hospital
+  ======================================================= */}
+
+  <path
+    id="sql-line"
+    d="M600 250 H825 V170 H930"
+    stroke="#22c55e"
+    strokeWidth="3"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+
+  <circle r="5" fill="#22c55e" filter="url(#glow)">
+    <animateMotion dur="3.1s" repeatCount="indefinite">
+      <mpath href="#sql-line"/>
+    </animateMotion>
+  </circle>
+
+  <circle r="3.5" fill="#86efac" opacity=".45" filter="url(#glow)">
+    <animateMotion dur="3.1s" begin="-0.35s" repeatCount="indefinite">
+      <mpath href="#sql-line"/>
+    </animateMotion>
+  </circle>
+
+  {/* =======================================================
+      DAX : Pizzeria → Hospital
+  ======================================================= */}
+
+  <path
+    id="dax-line"
+    d="M700 200 H820 V255 H930"
+    stroke="#a78bfa"
+    strokeWidth="3"
+    fill="none"
+  />
+
   <circle r="5" fill="#a78bfa" filter="url(#glow)">
-    <animateMotion dur="3s" repeatCount="indefinite">
-      <mpath href="#powerbi-line" />
+    <animateMotion dur="2.9s" repeatCount="indefinite">
+      <mpath href="#dax-line"/>
     </animateMotion>
   </circle>
 
-  {/* Optimization: Housing ↔ India */}
-  <path id="optimization-line" d="M700 670 H820" stroke="#f59e0b" strokeWidth="3" fill="none" />
-  <circle r="5" fill="#f59e0b" filter="url(#glow)">
-    <animateMotion dur="2.7s" repeatCount="indefinite">
-      <mpath href="#optimization-line" />
+  <circle r="3.5" fill="#ddd6fe" opacity=".45" filter="url(#glow)">
+    <animateMotion dur="2.9s" begin="-0.35s" repeatCount="indefinite">
+      <mpath href="#dax-line"/>
     </animateMotion>
   </circle>
+
+  {/* =======================================================
+      EXCEL : Pizzeria → Climate Dashboard
+  ======================================================= */}
+
+  <path
+    id="excel-line"
+    d="M500 300 V450 H345"
+    stroke="#10b981"
+    strokeWidth="3"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+
+  <circle r="5" fill="#10b981" filter="url(#glow)">
+    <animateMotion dur="3s" repeatCount="indefinite">
+      <mpath href="#excel-line"/>
+    </animateMotion>
+  </circle>
+
+  <circle r="3.5" fill="#6ee7b7" opacity=".45" filter="url(#glow)">
+    <animateMotion dur="3s" begin="-0.35s" repeatCount="indefinite">
+      <mpath href="#excel-line"/>
+    </animateMotion>
+  </circle>
+
+  {/* =======================================================
+      BUSINESS ANALYSIS : Pizzeria ↓ Capstone
+  ======================================================= */}
+
+  <path
+    id="ba-line"
+    d="M620 300 V545"
+    stroke="#f59e0b"
+    strokeWidth="3"
+    fill="none"
+  />
+
+  <circle r="5" fill="#f59e0b" filter="url(#glow)">
+    <animateMotion dur="2.6s" repeatCount="indefinite">
+      <mpath href="#ba-line"/>
+    </animateMotion>
+  </circle>
+
+  <circle r="3.5" fill="#fde68a" opacity=".45" filter="url(#glow)">
+    <animateMotion dur="2.6s" begin="-0.35s" repeatCount="indefinite">
+      <mpath href="#ba-line"/>
+    </animateMotion>
+  </circle>
+
 </svg>
 <div className="pointer-events-none absolute right-3 top-3 z-[999] opacity-0 transition-opacity duration-300 group-hover:opacity-100">    
 </div>
         {projects.map((project, index) => (
+            <a
+    key={project.title}
+    href={project.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block"
+  >
           <div
             key={project.title}
             className={`absolute ${positions[index]} group w-[300px] shadow-[0_18px_40px_rgba(0,0,0,0.18),0_0_45px_rgba(34,211,238,0.22)] rounded-2xl border border-white/15 bg-white/8 p-5 backdrop-blur-md transition-all duration-500 hover:-translate-y-3 hover:border-cyan-300/50 hover:bg-white/12 hover:shadow-2xl`}
@@ -234,6 +268,7 @@ export default function Projects() {
   ))}
 </div>
           </div>
+          </a>
         ))}
       </div>
     </section>
