@@ -17,15 +17,18 @@ const handleScroll = () => {
 };
   return (
     <section id="education" className="min-h-screen px-8 py-24 md:px-20">
+      
       <div className="grid max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
-          <h3 className="mb-12 text-sm font-semibold uppercase tracking-[0.3em] text-white/70">
-            Education
-          </h3>
-
+<div className="mb-10">
+        <h2 className="text-4xl font-bold text-white" style={{
+  textShadow:
+    "0 2px 4px rgba(0,0,0,0.18), 0 8px 18px rgba(0,0,0,0.15)"
+}}> Education</h2>
+      </div>
           <div className="space-y-16">
             <div>
-              <h4 className="text-2xl font-bold text-cyan-300">
+              <h4 className="text-xl font-bold text-cyan-300">
                 NYU Tandon School of Engineering
               </h4>
               <p className="mt-2 text-xl text-white/80">
@@ -35,7 +38,7 @@ const handleScroll = () => {
             </div>
 
             <div>
-              <h4 className="text-2xl font-bold text-cyan-300">
+              <h4 className="text-xl font-bold text-cyan-300">
                 Pune University
               </h4>
               <p className="mt-2 text-xl text-white/80">
@@ -47,9 +50,12 @@ const handleScroll = () => {
         </div>
 
         <div className="border-l border-white/25 pl-10">
-          <h3 className="mb-12 text-sm font-semibold uppercase tracking-[0.3em] text-white/70">
-            Certifications
-          </h3>
+        <div className="mb-10">
+        <h2 className="text-4xl font-bold text-white" style={{
+  textShadow:
+    "0 2px 4px rgba(0,0,0,0.18), 0 8px 18px rgba(0,0,0,0.15)"
+}}> Certifications</h2>
+      </div>
 
           <div className="relative">
             <div className="pointer-events-none absolute left-[-59px] top-22 hidden h-20 w-9 rounded-full border border-white/30 bg-[#0d5f73] lg:flex items-start justify-center p-2">
@@ -94,11 +100,11 @@ const handleScroll = () => {
       hover:bg-white/10
     "
   >
-    <h4 className="text-md font-semibold text-white">
+    <h4 className="text-xl font-bold text-cyan-300">
       {cert.title}
     </h4>
 
-    <p className="mt-1 text-sm text-white/75">
+    <p className="mt-1 text-lg text-white">
       {cert.subtitle}
     </p>
 

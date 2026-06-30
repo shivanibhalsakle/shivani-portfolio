@@ -1,4 +1,5 @@
 import { projects } from "../data/projects";
+import { ExternalLink } from "lucide-react";
 
 const skillColors: Record<string, string> = {
   Python: "border-sky-300/40 bg-sky-400/20 text-sky-100",
@@ -12,7 +13,8 @@ const skillColors: Record<string, string> = {
   Jira: "border-blue-300/40 bg-blue-400/20 text-blue-100",
   UAT: "border-pink-300/40 bg-pink-400/20 text-pink-100",
   Hexaly: "border-yellow-300/40 bg-yellow-400/20 text-yellow-100",
-  Optimization: "border-orange-300/40 bg-orange-400/20 text-orange-100",
+  PowerPoint: "border-orange-300/40 bg-orange-400/20 text-orange-100",
+  Tableau: "border-black/40 bg-black/20 text-black-100",
 };
 
 const positions = [
@@ -35,10 +37,10 @@ export default function Projects() {
   return (
     <section id="projects" className="min-h-screen px-8 py-24 md:px-20">
       <div className="mb-10">
-        <h2 className="text-4xl font-bold text-white"> Featured Projects</h2>
-        <p className="mt-4 max-w-2xl text-white/75">
-          A relational view of selected projects, connected by shared tools and skills.
-        </p>
+        <h2 className="text-4xl font-bold text-white" style={{
+  textShadow:
+    "0 2px 4px rgba(0,0,0,0.18), 0 8px 18px rgba(0,0,0,0.15)"
+}}> Featured Projects</h2>
       </div>
 
       <div className="relative h-[850px] max-w-6xl">
@@ -202,19 +204,19 @@ export default function Projects() {
   >
           <div
             key={project.title}
-            className={`absolute ${positions[index]} group w-[300px] shadow-[0_18px_40px_rgba(0,0,0,0.18),0_0_45px_rgba(34,211,238,0.22)] rounded-2xl border border-white/15 bg-white/8 p-5 backdrop-blur-md transition-all duration-500 hover:-translate-y-3 hover:border-cyan-300/50 hover:bg-white/12 hover:shadow-2xl`}
+            className={`absolute ${positions[index]} group w-[300px] shadow-[0_18px_40px_rgba(0,0,0,0.18),0_0_45px_rgba(34,211,238,0.22)] rounded-2xl border border-white/15 bg-[#00355f]/30 p-5 backdrop-blur-md transition-all duration-500 hover:-translate-y-3 hover:border-cyan-300/50 hover:bg-white/12 hover:shadow-2xl`}
           >
             <p className="text-xs uppercase tracking-[0.25em] text-white/80">
               Dive: {project.dive}
             </p>
-
+<div className="project-title">
             <h3 className="mt-2 text-xl font-bold text-white">
-              {project.title}
+              {project.title} {" "}<ExternalLink className="project-link-icon inline" size={18} strokeWidth={2.2} />
             </h3>
-
+</div>
             <div className="my-4 h-px bg-white/15" />
 
-            <p className="text-sm leading-6 text-[#00365f]/80">
+            <p className="text-md leading-6 text-black/90">
               {project.investigation}
             </p>
 

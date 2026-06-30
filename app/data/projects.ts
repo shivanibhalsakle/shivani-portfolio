@@ -9,7 +9,7 @@ export const projects = [
     link: "https://github.com/shivanibhalsakle/airline-network-optimization",
   },
   {
-    title: "Pizzeria Analysis",
+    title: "Pizzeria Analysis ",
     dive: "Financial Analytics",
     investigation:
       "Queried, cleaned, and normalized operational and financial data, then built decision-support models.",
@@ -32,7 +32,7 @@ export const projects = [
       "Built an interactive dashboard to analyze U.S. climate policies and compare state-level initiatives from 2004-2024.",
     skills: ["Tableau", "Excel"],
     impacts: ["Time-series analysis", "Regional comparison", "Policy distribution"],
-    link: "#",
+    link: "https://public.tableau.com/views/EnvironmentalPoliciesintheUSA/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
   },
   {
     title: "Capstone Consulting",

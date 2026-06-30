@@ -25,4 +25,13 @@ export const skills = [
   { name: "CAPM", mapsTo: "Education section", target: "education" },
   { name: "ECBA", mapsTo: "Education section", target: "education" },
   { name: "PowerPoint", mapsTo: "Pizzeria Analysis", target: "projects" },
+  { name: "Workshop Facilitation", mapsTo: "Research Analyst Intern", target: "experience" },
+  { name: "Root Cause Analysis", mapsTo: "Hospital Operations Dashboard", target: "projects" },
+  { name: "Change Management", mapsTo: "Research Analyst Intern", target: "experience" },
+  { name: "Cross-functional Collaboration", mapsTo: "Experience section", target: "experience" },
+  { name: "Sprint Planning", mapsTo: "Research Analyst Intern", target: "experience" },
+  { name: "CSS", mapsTo: "Experience section", target: "experience" },
+  { name: "JavaScript", mapsTo: "Experience section", target: "experience" },
+  { name: "XLOOKUP", mapsTo: "Experience section", target: "experience" },
+  { name: "Financial Modeling", mapsTo: "Pizzeria Analysis", target: "projects" },
 ];

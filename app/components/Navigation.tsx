@@ -11,8 +11,8 @@ const sections = [
 export default function Navigation() {
   return (
     <aside className="fixed right-8 top-1/2 hidden -translate-y-1/2 lg:block">
-      <div className="rounded-full border border-white/30 bg-white/10 px-4 py-6 backdrop-blur-md">
-        <p className="mb-6 text-center text-2xl font-bold text-white">
+      <div className="rounded-full border border-[#062447]/20 shadow-[0_1px_100px_rgba(20,255,200,0.2)] bg-white/20 px-4 py-6 ">
+        <p className="mb-6 text-center text-2xl font-bold text-cyan-300 glow">
           SB.
         </p>
 
@@ -22,7 +22,7 @@ export default function Navigation() {
               key={section}
               href={`#${section.toLowerCase()}`}
               className="
-                text-white
+                text-[#062447]
                 font-bold
                 cursor-pointer
                 hover:text-cyan-300

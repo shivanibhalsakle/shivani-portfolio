@@ -5,11 +5,12 @@ export default function Contact() {
   return (
     <section id="contact" className="min-h-screen px-8 py-24 md:px-20">
       <div className="mx-auto max-w-3xl text-center">
-        <p className="text-sm uppercase tracking-[0.35em] text-white/70">
-          06 Contact
-        </p>
+        
 
-        <h2 className="mt-6 text-4xl font-bold text-white">
+        <h2 className="section-title mt-6 text-4xl font-bold text-white" style={{
+  textShadow:
+    "0 2px 4px rgba(0,0,0,0.18), 0 8px 18px rgba(0,0,0,0.15)"
+}}>
           Let’s Connect
         </h2>
 
@@ -35,7 +36,7 @@ export default function Contact() {
         <form
           action="https://formspree.io/f/xjgqogwp"
           method="POST"
-          className="mt-12 rounded-3xl border border-white/15 bg-white/5 p-6 backdrop-blur-md"
+          className="mt-12 rounded-3xl border border-white/15 bg-white/5 p-6 backdrop-blur-md border border-white/20 shadow-[0_1px_100px_rgba(20,255,200,0.5)] bg-white/10"
         >
           <textarea
             name="message"

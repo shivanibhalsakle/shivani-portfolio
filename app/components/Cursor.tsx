@@ -18,7 +18,7 @@ export default function Cursor() {
       if (
         el &&
         el.closest(
-          "a, button, textarea, h1, h2, h3, h4, p, li"
+          "a, button, textarea, h1, h2, h3, h4, p, li, img"
         )
       ) {
         setHovering(true);

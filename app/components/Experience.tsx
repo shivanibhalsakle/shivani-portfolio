@@ -9,11 +9,15 @@ import {
 } from "lucide-react";
 
 import { experience, skills } from "../data/experience";
+import FlipCard from "./FlipCard";
 
 export default function Experience() {
   return (
     <section id="experience" className="min-h-screen px-8 py-24 md:px-20">
-      <h2 className="mb-16 text-4xl font-bold text-white">
+      <h2 className="mb-16 text-4xl font-bold text-white " style={{
+  textShadow:
+    "0 2px 4px rgba(0,0,0,0.18), 0 8px 18px rgba(0,0,0,0.15)"
+}}>
         Experience
       </h2>
 
@@ -32,6 +36,7 @@ export default function Experience() {
                 <div
                     className="
                     absolute
+                  
                     -left-[49px]
                     top-1
                     h-5
@@ -44,20 +49,23 @@ export default function Experience() {
                     duration-300
                     group-hover:bg-cyan-300
                     group-hover:shadow-[0_0_18px_rgba(34,211,238,0.9)]
+                    
                     "
+                    
                 />
 
-                <h3 className="text-lg font-bold text-white group-hover:text-cyan-200 transition">
+                <h3 className="text-xl leading-8 max-w-2xl font-bold text-white group-hover:text-cyan-300 transition">
 
-                    <a href="#" target="_blank">
+                    <a href={role.link} target="_blank">
                         {role.title}
+                        
                     </a>
 
                 </h3>
 
-                <p className="mt-1 text-sm text-white/70">
+                <p className=" text-lg text-white/70">
 
-                    <a href="#" target="_blank">
+                    <a href={role.link} target="_blank">
                         {role.company}
                     </a>
 
@@ -67,7 +75,7 @@ export default function Experience() {
 
                 </p>
 
-                <ul className="mt-5 space-y-3">
+                <ul className="mt-5 space-y-2">
 
                     {role.details.map((item) => (
 
@@ -93,68 +101,57 @@ export default function Experience() {
     <div>
 
         <div className="pt-20 -translate-x-25">
-  <div className="h-64 w-72 overflow-hidden rounded-2xl border border-[#00365f] bg-white/5 p-5 backdrop-blur-md">
+  
     <h3 className="mb-2 text-xl font-bold text-white">What I bring</h3>
 
     
 
-    <div className="relative h-40 overflow-hidden">
-      <div className="animate-[scrollSkills_30s_linear_infinite] space-y-5">
-        {[...skills, ...skills].map((skill, index) => (
-         <div className="animate-scrollSkills space-y-6">
+    
+      <div className="space-y-5 ">
 
-  {[
-    {
-      icon: <FileText className="h-6 w-6 text-white/80 transition duration-300 group-hover:text-cyan-300" />,
-      title: "Requirements Gathering",
-      subtitle: "& Documentation",
-    },
-    {
-      icon: <Workflow className="h-6 w-6 text-white/80 transition duration-300 group-hover:text-cyan-300" />,
-      title: "Process Improvement",
-      subtitle: "& Automation",
-    },
-    {
-      icon: <BarChart3 className="h-6 w-6 text-white/80 transition duration-300 group-hover:text-cyan-300" />,
-      title: "Data Analysis",
-      subtitle: "& Visualization",
-    },
-    {
-      icon: <Users className="h-6 w-6 text-white/80 transition duration-300 group-hover:text-cyan-300" />,
-      title: "Stakeholder Management",
-      subtitle: "& Collaboration",
-    },
-    {
-      icon: <LayoutDashboard className="h-6 w-6 text-white/80 transition duration-300 group-hover:text-cyan-300" />,
-      title: "Dashboard Development",
-      subtitle: "& Reporting",
-    },
-    {
-      icon: <ClipboardCheck className="h-6 w-6 text-white/80 transition duration-300 group-hover:text-cyan-300" />,
-      title: "Agile Delivery",
-      subtitle: "& UAT",
-    },
-  ].map((skill, index) => (
-    <div key={index} className="group flex items-center gap-3">
-      {skill.icon}
+<FlipCard
+  frontIcon={<FileText className="h-6 w-6 text-cyan-300 " />}
+  frontTitle="Problem Solving"
+  frontSubtitle="& Creativity"
 
-      <div>
-        <h4 className="text-sm font-semibold text-[#00365f]">
-          {skill.title}
-        </h4>
+  backIcon={<FileText className="h-6 w-6 text-cyan-300" />}
+  backTitle="Requirements Gathering"
+  backSubtitle="& Documentation"
+/>
 
-        <p className="text-xs text-[#00365f]">
-          {skill.subtitle}
-        </p>
-      </div>
-    </div>
-  ))}
+<FlipCard
+  frontIcon={<BarChart3 className="h-6 w-6 text-cyan-300" />}
+  frontTitle="Data Analysis"
+  frontSubtitle="& Visualization"
+
+  backIcon={<LayoutDashboard className="h-6 w-6 text-cyan-300" />}
+  backTitle="Strategic Thinking"
+  backSubtitle="& Planning"
+/>
+
+<FlipCard
+  frontIcon={<Users className="h-6 w-6 text-cyan-300" />}
+  frontTitle="Stakeholder Management"
+  frontSubtitle="& Collaboration"
+
+  backIcon={<Workflow className="h-6 w-6 text-cyan-300" />}
+  backTitle="Business Intelligence"
+  backSubtitle="& Market Research"
+/>
+
+<FlipCard
+  frontIcon={<ClipboardCheck className="h-6 w-6 text-cyan-300" />}
+  frontTitle="Leadership"
+  frontSubtitle="& Initiative"
+
+  backIcon={<Database className="h-6 w-6 text-cyan-300" />}
+  backTitle="People SKills"
+  backSubtitle="& Communication"
+/>
 
 </div>
-        ))}
-      </div>
-    </div>
-  </div>
+    
+  
 </div>
 
     </div>

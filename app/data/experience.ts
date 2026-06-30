@@ -8,6 +8,7 @@ export const experience = [
       "Developed a vendor recommendation application.",
       "Created change management roadmap, ROI model and Gantt chart.",
     ],
+    link: "https://teamboozallen.lovable.app/"
   },
 
   {
@@ -19,6 +20,7 @@ export const experience = [
       "Created Power BI dashboards across 20+ developer tools.",
       "Wrote Jira user stories and conducted UAT.",
     ],
+    link: "https://alhansat.com/"
   },
 
   {
@@ -30,6 +32,7 @@ export const experience = [
       "Integrated Quaderno automation reducing errors by 40%.",
       "Performed process analysis using Hotjar insights.",
     ],
+    link: "https://sakshi.org.in/"
   },
 ];
 

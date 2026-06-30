@@ -113,3 +113,78 @@ button:hover,
 .animate-floatBubble {
   animation: floatBubble 14s linear infinite;
 }
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(1.22);
+    opacity: 0;
+  }
+}
+
+.animate-ripple {
+  animation: ripple 1.4s ease-out infinite;
+}
+
+@keyframes spinSlow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spinSlow {
+  animation: spinSlow 8s linear infinite;
+}
+
+.text-shimmer {
+  color: #062447;
+  background: linear-gradient(
+    90deg,
+    #062447 0%,
+    #062447 20%,
+    #ffffff 35%,
+    #67e8f9 50%,
+    #ffffff 65%,
+    #062447 80%,
+    #062447 100%
+  );
+  background-size: 250% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shimmerText 3s linear infinite;
+}
+
+.section-title {
+  text-shadow:
+    0 2px 4px rgba(0,0,0,.18),
+    0 8px 18px rgba(0,0,0,.12);
+    
+}
+
+.project-card:hover .project-link-icon {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
+
+
+
+.project-card:hover .project-link-icon {
+  color: #7dd3fc;
+  transform: translate(2px, -2px);
+}
+
+.project-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.project-link-icon {
+  vertical-align: middle;
+  color: rgba(255,255,255,0.7);
+}
