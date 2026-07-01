@@ -25,10 +25,12 @@ export default function Hero() {
 
           <div className="mt-8 flex gap-4">
             <a
-              href="#projects"
+              href="/SHIVANI__BHALSAKLE_Resume.pdf"
               className="rounded-full bg-[#062447] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#0b3a69]"
+               target="_blank"
+               rel="noopener noreferrer"
             >
-              View My Work
+              View Resume
             </a>
 
             <a
